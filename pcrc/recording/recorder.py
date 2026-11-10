@@ -378,6 +378,6 @@ class Recorder:
 		self.logger.info('Marker added: {}, {} markers has been stored'.format(marker, len(self.replay_file.markers)))
 
 	def delete_marker(self, index):
-		marker = self.replay_file.pop_marker(index - 1)
+		marker = self.replay_file.pop_marker(index)
 		self.pcrc.chat(self.tr('chat.command.marker.delete', misc_util.format_milli(marker['realTimestamp'])))
 		self.logger.info('Marker deleted: {}, {} markers has been stored'.format(marker, len(self.replay_file.markers)))
