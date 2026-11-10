@@ -138,7 +138,11 @@ def main():
 	logger.info('Enter "start" to start PCRC')
 	while True:
 		try:
-			text = input()
+			try:
+				text = input()
+			except EOFError:
+				logger.info('Console input closed')
+				break
 			if text == '':
 				continue
 			logger.info('Processing command "{}"'.format(text))
