@@ -19,7 +19,7 @@ def get_milli_time():
 
 
 def format_pos(pos: PositionAndLook) -> str:
-	return '({.2f}, {.2f}, {.2f})'.format(pos.x, pos.y, pos.z)
+	return '({:.2f}, {:.2f}, {:.2f})'.format(pos.x, pos.y, pos.z)
 
 
 # Returns a string like h:m for given millis
